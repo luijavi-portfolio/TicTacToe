@@ -1,0 +1,39 @@
+\hypertarget{_square_8h_source}{}\doxysection{Square.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#include "{}Graphics.h"{}}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{keyword}{class }\mbox{\hyperlink{class_square}{Square}}}
+\DoxyCodeLine{5 \{}
+\DoxyCodeLine{6 \textcolor{keyword}{public}:}
+\DoxyCodeLine{7     \textcolor{keyword}{enum class} Symbol \{ kEmpty, kX, kO \};}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_square}{Square}}(\mbox{\hyperlink{class_graphics}{Graphics}}\& gfx)}
+\DoxyCodeLine{10         :}
+\DoxyCodeLine{11         gfx(gfx),}
+\DoxyCodeLine{12         rect\{\},}
+\DoxyCodeLine{13         symbol\{ Symbol::kEmpty \}}
+\DoxyCodeLine{14     \{ \}}
+\DoxyCodeLine{15     \textcolor{comment}{/*Square(const Square\&) = delete;*/}}
+\DoxyCodeLine{16     \textcolor{comment}{/*Square\& operator=(const Square\&) = delete;*/}}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} SetRect(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, \textcolor{keywordtype}{int} w, \textcolor{keywordtype}{int} h)}
+\DoxyCodeLine{18     \{}
+\DoxyCodeLine{19         rect = \{ x, y, w, h \};}
+\DoxyCodeLine{20     \}}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} SetSymbol(Symbol symbol\_in) \{ symbol = symbol\_in; \}}
+\DoxyCodeLine{22     \textcolor{keyword}{const} Symbol GetSymbol()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} symbol; \}}
+\DoxyCodeLine{23     SDL\_Rect* GetRect() \{ \textcolor{keywordflow}{return} \&rect; \}}
+\DoxyCodeLine{24     \textcolor{keyword}{const} SDL\_Rect* GetRect()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} \&rect; \}}
+\DoxyCodeLine{25     \textcolor{keywordtype}{void} OnHover();}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} Draw();}
+\DoxyCodeLine{27 \textcolor{keyword}{private}:}
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} DrawX();}
+\DoxyCodeLine{29     \textcolor{keywordtype}{void} DrawO();}
+\DoxyCodeLine{30 \textcolor{keyword}{private}:}
+\DoxyCodeLine{31     \mbox{\hyperlink{class_graphics}{Graphics}}\& gfx;}
+\DoxyCodeLine{32     SDL\_Rect rect;}
+\DoxyCodeLine{33     Symbol symbol;}
+\DoxyCodeLine{34 \};}
+
+\end{DoxyCode}

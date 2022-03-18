@@ -1,0 +1,29 @@
+\hypertarget{_graphics_8h_source}{}\doxysection{Graphics.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <SDL.h>}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <array>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_graphics}{Graphics}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_graphics}{Graphics}}(\textcolor{keyword}{class} \mbox{\hyperlink{class_window}{Window}}\& window);}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_graphics}{Graphics}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_graphics}{Graphics}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_graphics}{\string~Graphics}}();}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_graphics}{Graphics}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_graphics}{Graphics}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} BeginFrame();}
+\DoxyCodeLine{14     \textcolor{keywordtype}{void} EndFrame();}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} PutPixel(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y, SDL\_Color c);}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} DrawLine(\textcolor{keywordtype}{int} x1, \textcolor{keywordtype}{int} y1, \textcolor{keywordtype}{int} x2, \textcolor{keywordtype}{int} y2, SDL\_Color c);}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} DrawRect(\textcolor{keyword}{const} SDL\_Rect* rect, SDL\_Color c);}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} DrawRects(\textcolor{keyword}{const} SDL\_Rect* rects, \textcolor{keywordtype}{int} num\_rects, SDL\_Color c);}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keyword}{private}:}
+\DoxyCodeLine{21     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} kScreenWidth = 800;}
+\DoxyCodeLine{22     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} kScreenHeight = 800;}
+\DoxyCodeLine{23     SDL\_Renderer* renderer;}
+\DoxyCodeLine{24 \};}
+
+\end{DoxyCode}

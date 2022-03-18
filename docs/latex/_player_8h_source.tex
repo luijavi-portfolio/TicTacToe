@@ -1,0 +1,29 @@
+\hypertarget{_player_8h_source}{}\doxysection{Player.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Square.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_player}{Player}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8 \textcolor{keyword}{public}:}
+\DoxyCodeLine{9     \mbox{\hyperlink{class_player}{Player}}()}
+\DoxyCodeLine{10         :}
+\DoxyCodeLine{11         symbol(Square::Symbol::kEmpty)}
+\DoxyCodeLine{12     \{\};}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_player}{Player}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_player}{Player}}\&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{14     \mbox{\hyperlink{class_player}{Player}}\& operator=(\mbox{\hyperlink{class_player}{Player}}\&\& p) \textcolor{keyword}{noexcept} \{ \textcolor{keywordflow}{return} *\textcolor{keyword}{this}; \}}
+\DoxyCodeLine{15     \textcolor{comment}{/*void SelectSquare(std::vector<Square>\& squares);*/}}
+\DoxyCodeLine{16     Square::Symbol GetSymbol()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} symbol; \}}
+\DoxyCodeLine{17     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} TurnTaken()\textcolor{keyword}{ const }\{ \textcolor{keywordflow}{return} turn\_taken; \}}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} SetSymbol(Square::Symbol symbol\_in) \{ symbol = symbol\_in; \}}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} SetTurnTaken(\textcolor{keywordtype}{bool} has\_taken\_turn) \{ turn\_taken = has\_taken\_turn; \}}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} ResetTurnTaken() \{ turn\_taken = \textcolor{keyword}{false}; \}}
+\DoxyCodeLine{21 \textcolor{keyword}{private}:}
+\DoxyCodeLine{22     \textcolor{keywordtype}{bool} turn\_taken = \textcolor{keyword}{false};}
+\DoxyCodeLine{23     Square::Symbol symbol;}
+\DoxyCodeLine{24 \};}
+
+\end{DoxyCode}

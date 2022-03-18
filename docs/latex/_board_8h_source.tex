@@ -1,0 +1,27 @@
+\hypertarget{_board_8h_source}{}\doxysection{Board.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Graphics.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <array>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{keyword}{class }\mbox{\hyperlink{class_board}{Board}}}
+\DoxyCodeLine{8 \{}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_board}{Board}}(\mbox{\hyperlink{class_graphics}{Graphics}}\& gfx);}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_board}{Board}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_board}{Board}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_board}{Board}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_board}{Board}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{13     \textcolor{keywordtype}{void} Draw();}
+\DoxyCodeLine{14 \textcolor{keyword}{private}:}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{16 \textcolor{keyword}{private}:}
+\DoxyCodeLine{17     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} kNumHashes = 4;}
+\DoxyCodeLine{18     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} kHashLength = 710;}
+\DoxyCodeLine{19     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} kHashTickness = 10;}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_graphics}{Graphics}}\& gfx;}
+\DoxyCodeLine{21     SDL\_Rect hashes[kNumHashes];}
+\DoxyCodeLine{22 \};}
+
+\end{DoxyCode}

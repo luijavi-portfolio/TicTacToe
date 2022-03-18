@@ -1,0 +1,50 @@
+\hypertarget{_game_8h_source}{}\doxysection{Game.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Graphics.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}Board.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}Square.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}Player.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{keyword}{class }\mbox{\hyperlink{class_game}{Game}}}
+\DoxyCodeLine{10 \{}
+\DoxyCodeLine{11 \textcolor{keyword}{public}:}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_game}{Game}}(\textcolor{keyword}{class} \mbox{\hyperlink{class_window}{Window}}\& window);}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} Run();}
+\DoxyCodeLine{14 \textcolor{keyword}{private}:}
+\DoxyCodeLine{15     \textcolor{keywordtype}{void} ProcessEvent(SDL\_Event* event);}
+\DoxyCodeLine{16     \textcolor{keywordtype}{void} UpdateLogic();}
+\DoxyCodeLine{17     \textcolor{keywordtype}{void} ComposeFrame();}
+\DoxyCodeLine{18     \textcolor{keywordtype}{void} InitPlayers();}
+\DoxyCodeLine{19     \textcolor{keywordtype}{void} PassTurn();}
+\DoxyCodeLine{20     \textcolor{keywordtype}{void} CurrentPlayerSelectSquare();}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} Reset();}
+\DoxyCodeLine{22     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} IsThreeInARow() \textcolor{keyword}{const};}
+\DoxyCodeLine{23     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} IsHorizontalThreeInARow(Square::Symbol symbol) \textcolor{keyword}{const};}
+\DoxyCodeLine{24     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} IsVerticalThreeInARow(Square::Symbol symbol) \textcolor{keyword}{const};}
+\DoxyCodeLine{25     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} IsDiagonalThreeInARow(Square::Symbol symbol) \textcolor{keyword}{const};}
+\DoxyCodeLine{26     \textcolor{keyword}{const} \textcolor{keywordtype}{bool} IsDraw() \textcolor{keyword}{const};}
+\DoxyCodeLine{27 \textcolor{keyword}{private}:}
+\DoxyCodeLine{28     \textcolor{keywordtype}{bool} has\_quit;}
+\DoxyCodeLine{29     \textcolor{keywordtype}{bool} game\_started = \textcolor{keyword}{false};}
+\DoxyCodeLine{30     \textcolor{keywordtype}{bool} game\_over = \textcolor{keyword}{false};}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} current\_player = 0;}
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} selected\_square\_index = -\/1;}
+\DoxyCodeLine{33     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} kNumSquares = 9;}
+\DoxyCodeLine{34     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} kSquareSize = 230;}
+\DoxyCodeLine{35     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} kHashTickness = 10;}
+\DoxyCodeLine{36     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} kNumHashes = 4;}
+\DoxyCodeLine{37     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} \textcolor{keywordtype}{int} kHashLength = 710;}
+\DoxyCodeLine{38     \textcolor{keyword}{static} \textcolor{keyword}{constexpr} SDL\_Point kBoardOrigin\{ 45, 45 \};}
+\DoxyCodeLine{39     std::vector<Square> squares;}
+\DoxyCodeLine{40     std::vector<Player> players;}
+\DoxyCodeLine{41     \mbox{\hyperlink{class_window}{Window}}\& window;}
+\DoxyCodeLine{42     \mbox{\hyperlink{class_graphics}{Graphics}} gfx;}
+\DoxyCodeLine{43     \mbox{\hyperlink{class_board}{Board}} board;}
+\DoxyCodeLine{44     SDL\_Point mouse\_pos;}
+\DoxyCodeLine{45 \};}
+
+\end{DoxyCode}

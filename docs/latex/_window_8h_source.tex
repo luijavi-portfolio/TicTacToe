@@ -1,0 +1,22 @@
+\hypertarget{_window_8h_source}{}\doxysection{Window.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include "{}Graphics.h"{}}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_window}{Window}}}
+\DoxyCodeLine{7 \{}
+\DoxyCodeLine{8     \textcolor{keyword}{friend} Graphics::Graphics(\mbox{\hyperlink{class_window}{Window}}\&);}
+\DoxyCodeLine{9 \textcolor{keyword}{public}:}
+\DoxyCodeLine{10     \mbox{\hyperlink{class_window}{Window}}(std::string title, \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{11     \mbox{\hyperlink{class_window}{Window}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_window}{Window}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{12     \mbox{\hyperlink{class_window}{\string~Window}}();}
+\DoxyCodeLine{13     \mbox{\hyperlink{class_window}{Window}}\& operator=(\textcolor{keyword}{const} \mbox{\hyperlink{class_window}{Window}}\&) = \textcolor{keyword}{delete};}
+\DoxyCodeLine{14     SDL\_Window*\& GetWindow() \{ \textcolor{keywordflow}{return} window; \}}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     SDL\_Window* window;}
+\DoxyCodeLine{17 \};}
+
+\end{DoxyCode}
